@@ -1,4 +1,4 @@
-var fs = require('fs');
+import * as fs from 'node:fs';
 
 window.onload = choosePic;
 
