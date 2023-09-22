@@ -1,5 +1,7 @@
 var fs = require('fs');
 
+window.onload = choosePic;
+
 function readFiles(dirname, onFileContent, onError) {
   fs.readdir(dirname, function(err, filenames) {
     if (err) {
@@ -27,5 +29,5 @@ readFiles('dirname/', function(filename, content) {
 
 function choosePic() {
      var randomNum = Math.floor(Math.random() * data.length);
-     return document.getElementById("myPicture").src = data[randomNum];
+     document.getElementById("myPicture").src = data[randomNum];
 }
