@@ -1,15 +1,16 @@
-import * as fs from 'node:fs';
+import { readdir } from 'node:fs';
+import { readFile } from 'node:fs';
 
 window.onload = choosePic;
 
 function readFiles(dirname, onFileContent, onError) {
-  fs.readdir(dirname, function(err, filenames) {
+  readdir(dirname, function(err, filenames) {
     if (err) {
       onError(err);
       return;
     }
     filenames.forEach(function(filename) {
-      fs.readFile(dirname + filename, 'utf-8', function(err, content) {
+      readFile(dirname + filename, 'utf-8', function(err, content) {
         if (err) {
           onError(err);
           return;
