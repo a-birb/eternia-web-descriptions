@@ -21,7 +21,7 @@ function readFiles(dirname, onFileContent, onError) {
 }
 
 var data = {};
-readFiles('dirname/', function(filename, content) {
+readFiles('images/', function(filename, content) {
   data[filename] = content;
 }, function(err) {
   throw err;
@@ -29,5 +29,5 @@ readFiles('dirname/', function(filename, content) {
 
 function choosePic() {
      var randomNum = Math.floor(Math.random() * data.length);
-     document.getElementById("myPicture").src = data[randomNum];
+     document.getElementById("playby").src = data[randomNum];
 }
