@@ -1,5 +1,4 @@
-import { readdir } from 'node:fs';
-import { readFile } from 'node:fs';
+const fs = require('fs');
 
 window.onload = choosePic;
 
