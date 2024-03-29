@@ -17,7 +17,6 @@
             }
 
             img {
-                max-width: 100%;
                 height: 100vh;
                 position: relative;
             }
@@ -25,21 +24,14 @@
             .image-stack__item--top {
                 float: left;
                 margin-right: -100%;
-                z-index: 1;
-            }
-
-            .image-stack__item--text {
-                float: left;
-                max-height: 100vh;
-                margin-left: 25%;
-                margin-right: 0%;
+                z-index: 0;
             }
 
             .image-stack__item--bottom {
-                float: right;
-                margin-right: 10%;
-                margin-left: -100%;
-                z-index: -1;
+                width: 100%;
+                float: left;
+                margin-left: 20%;
+                z-index: 1;
             }
 
             .image-stack::after {
@@ -50,12 +42,6 @@
 
             .char-art-top {
                 animation: slide 3s 0s;
-                animation-fill-mode: forwards;
-            }
-
-            .char-art-bottom {
-                opacity: 0;
-                animation: fade 3s 2s;
                 animation-fill-mode: forwards;
             }
 
@@ -84,15 +70,11 @@
     </head>
 
     <body>
-        <div class="image-stack__item image-stack__item--bottom">
-            <img src="" class="char-art-bottom">
-        </div>
-
         <div class="image-stack__item image-stack__item--top">
             <img src="images\mari_2.png" class="char-art-top">
         </div>
 
-        <div class="image-stack__item--text">
+        <div class="image-stack__item image-stack__item--bottom">
             <img src="images\mari_text2.png" class="char-text">
         </div>
 
