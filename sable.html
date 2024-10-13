@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            * {
+            margin: 0px;
+            padding: 0;
+            box-sizing: border-box;
+            }
+
+            body {
+                max-height: 100%;
+                overflow: hidden;
+                background-image: url('https://cdna.artstation.com/p/assets/images/images/047/452/210/large/murakami-redforest.jpg?1647611288');
+                background-color: rgb(17, 18, 23);
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: top center;
+            }
+
+            img {
+                height: 100vh;
+                position: relative;
+                overflow: visible;
+                clip-path: rect(200vw);
+            }
+
+            .image-stack__item--top {
+                height: 100vh;
+                width: 100vw;
+                margin-left: -100%;
+                float: right;
+                z-index: 0;
+            }
+
+            .image-stack__item--bottom {
+                height: 100%;
+                width: 100vw;
+                margin-right: -100%;
+                float: left;
+                z-index: 1;
+            }
+
+            .image-stack::after {
+                content: ' ';
+                display: table;
+                clear: both;
+            }
+
+            .char-art-overlay {
+                display: block;
+                margin: 0 auto;
+                top: 0vh;
+                right: 0vw;
+                opacity: 1;
+                animation-fill-mode: forwards;
+            }
+
+            .char-art-top {
+                display: block;
+                margin: 0 0;
+                animation: fade 1s 0s;
+                animation-fill-mode: forwards;
+            }
+
+            .char-text {
+                display: block;
+                margin: 0 0 0 25%;
+                top: 100vh;
+                animation: slide-up 2s 0s;
+                animation-fill-mode: forwards;
+            }
+
+            @keyframes fade {
+                0% {opacity: 0;}
+                100% {opacity: 1;}
+            }
+
+            @keyframes slide-right {
+                0% {right: 50vw;}
+                100% {right: 0vw;}
+            }
+
+            @keyframes slide-up {
+                0% {top: 100vh;}
+                100% {top: 15vh;}
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="image-stack__item image-stack__item--top">
+            <div class="char-art-overlay">
+                <img src="" class="char-art-overlay">
+            </div>
+        </div>
+
+        <div class="image-stack__item image-stack__item--top">
+            <img src="images/sable.png" class="char-art-top">
+        </div>
+
+        <div class="image-stack__item image-stack__item--bottom">
+            <img src="images/sable_text.png" class="char-text">
+        </div>
+
+        <div>
+            <audio autoplay loop src="audio\sable.mp3"></audio>
+        </div>
+    </body>
+
+</html>
