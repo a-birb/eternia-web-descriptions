@@ -57,8 +57,7 @@
                 display: block;
                 margin: 0 auto;
                 top: 100vh;
-                animation: slide-up 2s 0s;
-                animation-fill-mode: forwards;
+                animation: slide-up 1.5s 4s forwards;
             }
 
             .char-art-overlay {
@@ -66,6 +65,8 @@
                 margin: 0 auto;
                 top: 0vh;
                 opacity: 1;
+                background: #000100;
+                animation: fade-bg 1s 3.5s;
                 animation-fill-mode: forwards;
             }
 
@@ -88,17 +89,17 @@
 
     <body>
         <div class="image-stack__item image-stack__item--top">
-            <div class="char-art-overlay">
-                <img src="" class="char-art-overlay">
-            </div>
-        </div>
-
-        <div class="image-stack__item image-stack__item--top">
             <img src="images\tandavachaos2.gif" class="char-art-top">
         </div>
 
         <div class="image-stack__item image-stack__item--bottom">
             <img src="images\tandava_txt5.png" class="char-text">
+        </div>
+
+        <div class="image-stack__item image-stack__item--top">
+            <div class="char-art-overlay">
+                <img src="images\violentscene.gif" class="char-art-overlay">
+            </div>
         </div>
 
         <div>
